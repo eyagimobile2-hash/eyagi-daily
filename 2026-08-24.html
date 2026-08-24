@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>[이야기 데일리] 2026년 8월 24일 (월)</title>
+<!--
+  이야기 데일리 · 2026-08-21(금) 제1호(시범판) · 템플릿 v3.1 (애플 레퍼런스 스타일 + 컬러 포인트)
+  · 디자인 규칙: 캔버스 #f5f5f7(상단에 옅은 블루 워시) / 카드 #ffffff (radius 18px, 그림자 없음)
+    본문 #1d1d1f · 보조 #6e6e73·#515154 / 액션(필 버튼) #0071e3
+    섹션 컬러 포인트: 자사 #0071e3 · 3사 자회사 #7a4fd3 · 업계·정책 #0f9d77 · 타사 #e07f1d
+    (섹션 제목 앞 컬러 도트 + 주요 뉴스 카드의 틴트 태그에만 사용 — 본문은 무채색 유지)
+  · 타이포: 시스템 서체(SF Pro 계열) 스택. 제목 600 / 본문 400. v3 대비 전 역할 한 단계 축소.
+  · 상호작용(지침 2.2): 모든 기사는 접힌 상태로 시작(open 속성 금지). 헤드라인 클릭 → 요약 펼침
+    → '기사 원문 보기' 필 버튼으로 원문 이동.
+  · 빈 섹션은 "오늘은 주요 소식이 없습니다."만 표기.
+  · 실제 발송물: 이 구조 그대로, 기사 항목만 당일 기사로 교체. 파일명 이야기데일리_YYYY-MM-DD.html
+  · 수집 기간: 2026-08-21(금) 08:59 ~ 2026-08-24(월) 08:59 KST · 지침 v1.3 기준
+-->
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+  :root{
+    /* 배경만 법인 홈페이지형 딥네이비 그라데이션 — 카드 안쪽은 기존 라이트 유지 */
+    --bg1:#081633; --bg2:#0F2A5C; --bg3:#071228;
+    --on-bg:#EAF1FC; --on-bg-sub:#9DB0CE; --on-bg-accent:#7FB8FF;
+    --canvas:#F2F4F6; --card:#FFFFFF; --ink:#191F28; --body:#4E5968;
+    --muted:#8B95A1; --weak:#B0B8C1; --line:#E5E8EB;
+    --action:#3182F6; --action-soft:#E8F3FF;
+    --s1:#3182F6; --s1t:#E8F3FF;
+    --s2:#8B5CF6; --s2t:#F3EEFF;
+    --s3:#00A881; --s3t:#E8F8F4;
+    --s4:#F59E0B; --s4t:#FFF5DD;
+  }
+  *{box-sizing:border-box}
+  html{background:#081633;color-scheme:light only;min-height:100%}
+  html,body{margin:0}
+  body{
+    min-height:100vh;
+    background-color:#081633;
+    background-image:
+      radial-gradient(1100px 620px at 12% -8%, rgba(77,163,255,.20), transparent 62%),
+      radial-gradient(900px 520px at 92% 4%, rgba(167,139,250,.13), transparent 58%),
+      linear-gradient(168deg,var(--bg1) 0%,var(--bg2) 46%,var(--bg3) 100%);
+    background-attachment:fixed;background-repeat:no-repeat;
+    color:var(--on-bg);
+    font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+    font-size:13px;line-height:1.55;-webkit-text-size-adjust:100%;
+    padding:36px 16px 48px;
+  }
+  .wrap{max-width:680px;margin:0 auto}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 7px}
+  .hright{display:flex;flex-direction:column;align-items:flex-end;gap:7px;flex:0 0 auto}
+  .picker{display:flex;align-items:center;gap:7px}
+  .picker label{font-size:10px;font-weight:700;color:var(--on-bg-sub);letter-spacing:-.01em;white-space:nowrap}
+  #archsel{
+    font-family:inherit;font-size:12px;font-weight:700;color:var(--on-bg);letter-spacing:-.02em;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+    border-radius:10px;padding:7px 11px;cursor:pointer;max-width:200px;
+  }
+  #archsel:hover{background:rgba(255,255,255,.16)}
+  #archsel option{color:#191F28;background:#fff;font-weight:500}
+  .archlink{
+    font-size:10px;font-weight:700;color:var(--on-bg-sub);text-decoration:none;
+    border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;
+  }
+  .made{
+    flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:-.01em;color:var(--on-bg-sub);
+    border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;white-space:nowrap;
+  }
+  .kicker{font-size:11px;color:var(--on-bg-accent);letter-spacing:.06em;font-weight:700;margin:0}
+  h1{color:var(--on-bg);margin:0 0 5px;font-size:26px;font-weight:700;letter-spacing:-.035em;line-height:1.2}
+  h1 .pilot{font-size:11px;font-weight:500;color:var(--on-bg-sub);letter-spacing:-.01em;vertical-align:2px;margin-left:7px}
+  .dateline{font-size:11px;color:var(--on-bg-sub);margin:0 0 22px}
+  .oneline{
+    background:var(--card);border-radius:16px;padding:14px 16px;margin:0 0 28px;
+    box-shadow:0 8px 24px rgba(3,10,26,.28);
+    font-size:13px;line-height:1.65;letter-spacing:-.015em;color:var(--body);
+  }
+  .oneline b{font-weight:700;color:var(--action)}
+  .sec-title{
+    color:var(--on-bg);
+    display:flex;align-items:center;gap:7px;margin:28px 2px 9px;
+    font-size:18px;font-weight:700;letter-spacing:-.025em;
+  }
+  .sec-title:first-of-type{margin-top:0}
+  .sec-title .dot{width:4px;height:14px;border-radius:999px;flex:0 0 auto}
+  .sec-title .cnt{font-size:11px;font-weight:500;color:var(--on-bg-sub);letter-spacing:-.01em}
+  .block{color:var(--ink);background:var(--card);border-radius:16px;padding:0 16px;overflow:hidden;box-shadow:0 8px 24px rgba(3,10,26,.28)}
+  .block.empty{padding:14px 16px;color:var(--muted);font-size:12px}
+  .picks{display:grid;grid-template-columns:1fr;gap:8px}
+  @media (min-width:640px){.picks{grid-template-columns:repeat(3,1fr)}}
+  a.pick{
+    display:block;background:var(--card);border-radius:16px;padding:13px 14px;
+    box-shadow:0 8px 24px rgba(3,10,26,.28);
+    text-decoration:none;color:var(--ink);transition:background-color .15s ease;
+  }
+  a.pick:hover{background:#F9FAFB}
+  .pick .cat{
+    display:inline-block;font-size:10px;font-weight:700;letter-spacing:-.01em;
+    padding:3px 8px;border-radius:999px;margin-bottom:7px;
+  }
+  .pick p{margin:0;font-size:14px;font-weight:600;line-height:1.42;letter-spacing:-.025em}
+  .pick small{display:block;margin-top:6px;font-size:11px;font-weight:400;color:var(--muted)}
+  details.item{border-bottom:1px solid var(--line)}
+  details.item:last-child{border-bottom:0}
+  details.item summary{
+    list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:10px;
+    padding:13px 0;
+  }
+  details.item summary::-webkit-details-marker{display:none}
+  .hl{min-width:0;flex:1}
+  .hl .t{color:var(--ink);display:block;font-size:14px;font-weight:600;line-height:1.43;letter-spacing:-.025em}
+  .hl .m{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+  .chev{flex:0 0 auto;color:var(--weak);font-size:11px;margin-top:3px;transition:transform .18s ease}
+  details.item[open] .chev{transform:rotate(180deg);color:var(--action)}
+  .body{padding:0 0 15px;font-size:13px;line-height:1.7;color:var(--body)}
+  .body p{margin:0 0 11px}
+  .body .ref{color:var(--muted);font-size:12px}
+  a.more{
+    display:inline-block;background:var(--action);color:#fff;text-decoration:none;
+    font-size:12px;font-weight:600;border-radius:999px;padding:7px 13px;
+  }
+  footer{margin-top:32px;color:var(--on-bg-sub);font-size:10px;text-align:center;line-height:1.65}
+  @media (max-width:420px){
+    body{padding:24px 14px 38px}
+    h1{font-size:25px}
+    .sec-title{margin-top:25px}
+    .block{padding:0 15px}
+    .oneline{padding:13px 15px}
+  }
+
+  /* 뷰어 테마와 무관하게 동일 렌더링 고정 */
+  @media (prefers-color-scheme: dark){
+    html{background:#081633}
+    body{color:var(--on-bg)}
+    .oneline,.block,a.pick{background:#FFFFFF}
+    .oneline{color:#4E5968}
+    .hl .t,.pick p{color:#191F28}
+    .body{color:#4E5968}
+    .hl .m,.pick small,.block.empty,.body .ref{color:#8B95A1}
+    a.more{background:#3182F6;color:#fff}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="kicker">EYAGI DAILY · 큰사람커넥트 사내 뉴스레터</span>
+    <div class="hright">
+      <span class="made">마케팅팀 제작</span>
+      <div class="picker">
+        <label for="archsel">발행일 선택</label>
+        <select id="archsel" aria-label="발행일 선택"></select>
+      </div>
+      <noscript><a class="archlink" href="https://zmstkfkam6-creator.github.io/eyagi-daily/" target="_blank" rel="noopener">지난 발행분 보기</a></noscript>
+    </div>
+  </div>
+  <h1>이야기 데일리<span class="pilot">제2호</span></h1>
+  <p class="dateline">2026년 8월 24일 월요일 · 수집 8/21(금) 08:59 ~ 8/24(월) 08:59 · 기사 7건</p>
+  <div class="oneline"><b>오늘의 한 줄.</b> 미디어로그가 알뜰폰 고객 개인정보 위법 수집으로 제재 위기에 놓였고, 10월 시행되는 '최적 요금제 안내'에서 알뜰폰이 제외된 사실이 지적됐습니다.</div>
+  <div class="sec-title">오늘의 주요 뉴스</div>
+  <div class="picks">
+    <a class="pick" href="https://n.news.naver.com/mnews/article/374/0000528721?sid=101" target="_blank" rel="noopener">
+      <span class="cat" style="background:var(--s2t);color:var(--s2)">3사 자회사</span>
+      <p>미디어로그, 알뜰폰 개인정보 위법 수집 제재 위기</p>
+      <small>SBS Biz · 8/21 16:14</small>
+    </a>
+    <a class="pick" href="http://www.enewstoday.co.kr/news/articleView.html?idxno=2461700" target="_blank" rel="noopener">
+      <span class="cat" style="background:var(--s3t);color:var(--s3)">업계·정책</span>
+      <p>'최적 요금제 안내'에서 알뜰폰은 제외</p>
+      <small>이뉴스투데이 · 8/22 09:00</small>
+    </a>
+    <a class="pick" href="https://www.newsway.co.kr/news/view?ud=2026082115433985823" target="_blank" rel="noopener">
+      <span class="cat" style="background:var(--s3t);color:var(--s3)">업계·정책</span>
+      <p>3G 종료 관건은 '정부 승인'과 '이용자 보호'</p>
+      <small>뉴스웨이 · 8/21 17:16</small>
+    </a>
+  </div>
+
+  <div class="sec-title" id="sec1"><span class="dot" style="background:var(--s1)"></span>자사 소식 <span class="cnt">0건</span></div>
+  <div class="block empty">오늘은 주요 소식이 없습니다.</div>
+
+  <div class="sec-title" id="sec2"><span class="dot" style="background:var(--s2)"></span>이통3사 자회사 알뜰폰 <span class="cnt">2건</span></div>
+  <div class="block">
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">알뜰폰 납부자 주민번호 위법 수집…LG유플 자회사 미디어로그 제재 위기</span>
+          <span class="m">SBS Biz · 8/21 16:14</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>LG유플러스 자회사 미디어로그가 개인정보보호법 위반으로 제재를 받을 위기에 놓였다고 보도됐습니다. 알뜰폰 해지 고객의 개인정보를 파기하지 않고 보관했고, 알뜰폰 사용자와 요금 납부자가 다른 경우 납부자의 주민등록번호를 위법하게 수집한 사실이 적발됐습니다. <span class='ref'>[참고] 알뜰폰 가입·해지 과정의 개인정보 수집·파기 절차를 자사 기준으로도 점검해볼 만한 사안입니다.</span></p>
+        <a class="more" href="https://n.news.naver.com/mnews/article/374/0000528721?sid=101" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">휴넥트, KT M모바일 상담 맡는 '모빈스 고객센터' 신규 구축</span>
+          <span class="m">프라임경제 · 8/21 23:10</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>휴넥트가 서울 영등포구 문래동에 '모빈스 고객센터'를 열었습니다. KT 휴대폰 안심케어 상담과 함께 KT그룹 알뜰폰 브랜드 KT M모바일의 고객 상담을 핵심 업무로 삼으며, 단말기 분실·파손 접수와 보상 절차도 담당합니다.</p>
+        <a class="more" href="http://www.newsprime.co.kr/news/article.html?no=744715" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+  </div>
+
+  <div class="sec-title" id="sec3"><span class="dot" style="background:var(--s3)"></span>알뜰폰 업계·정책 <span class="cnt">5건</span></div>
+  <div class="block">
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">알뜰폰 1000만 회선인데…'최적 요금제 안내'에서는 빠졌다</span>
+          <span class="m">이뉴스투데이 · 8/22 09:00</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>10월부터 시행되는 이용 패턴 기반 '최적 요금제 안내' 제도가 이동통신 3사 가입자 중심으로 적용되고, 알뜰폰은 대상에서 제외된다고 보도됐습니다. 알뜰폰 회선이 1000만 개를 넘어섰음에도 가입자가 자신에게 맞는 요금제를 안내받기 어려운 구조라는 지적입니다. 기사에서는 그동안 알뜰폰 정책이 도매대가 인하·전파사용료 지원 등 가격 경쟁력에 치우쳐 왔다는 점도 함께 짚었습니다. <span class='ref'>[참고] 향후 제도 확대 시 사업자에 요구될 안내 의무를 미리 살펴볼 필요가 있습니다.</span></p>
+        <a class="more" href="http://www.enewstoday.co.kr/news/articleView.html?idxno=2461700" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">역사 속으로 사라지는 3G…관건은 '정부 승인'과 '이용자 보호'</span>
+          <span class="m">뉴스웨이 · 8/21 17:16 · 외 다수 매체</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>SKT의 3G 신규 가입 중단 이후, 실제 서비스 종료를 위해서는 과기정통부 승인과 이용자 보호 방안이 관건이라는 후속 보도가 이어졌습니다. 과기정통부 통계 기준 6월 말 3G 휴대전화 회선은 알뜰폰을 포함해 32만8124개이며, KT도 신규 가입 중단을 준비 중인 것으로 전해졌습니다. <span class='ref'>[참고] 자사 3G 잔여 회선 확인과 전환 안내 준비가 필요한 사안입니다.</span></p>
+        <a class="more" href="https://www.newsway.co.kr/news/view?ud=2026082115433985823" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">단통법 폐지에도 번호이동 2.5% 증가 그쳐…자급제·알뜰폰이 바꾼 시장</span>
+          <span class="m">더비즈 · 8/21 13:58</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>단통법 폐지 이후에도 번호이동은 2.5% 증가에 그치며 시장이 과열되지 않았다는 분석입니다. 자급제 단말을 구입한 뒤 통신사나 알뜰폰 요금제를 직접 고르는 소비자가 늘면서 단말기 지원금이 가입자를 움직이는 영향력이 과거보다 줄었다는 진단입니다.</p>
+        <a class="more" href="http://www.the-biz.co.kr/news/articleView.html?idxno=726591" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">무선 성장 멈추자 AI로…통신 3사, AIDC에 승부 건다</span>
+          <span class="m">연합뉴스 · 8/23 07:33 · 외 다수 매체</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>5G 전환율이 정점에 이르고 알뜰폰·중저가 요금제가 확산되면서 이동통신 3사가 무선 사업만으로는 성장을 기대하기 어려워졌다는 분석입니다. 이에 3사는 AI 데이터센터(AIDC)를 새 수익원으로 삼아 대규모 투자에 나서고 있습니다. <span class='ref'>[참고] 알뜰폰 확산이 이통사 실적 구조 변화의 배경으로 지목된 기사입니다.</span></p>
+        <a class="more" href="https://n.news.naver.com/mnews/article/001/0016265114?sid=105" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">여행객 e심 사용 급증…통신사 알짜 로밍 매출에 '빨간불'</span>
+          <span class="m">조선일보 · 8/22 08:01</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>해외여행객이 통신사 로밍 대신 e심을 선택하는 흐름이 확산되면서 전 세계 이동통신사들의 로밍 매출에 경고등이 켜졌다는 보도입니다. FDM CCS에 따르면 기존 이동통신사들은 전체 매출의 3~5%를 로밍 서비스에서 거두는 것으로 전해졌으며, 알뜰폰(MVNO) 사업자와 경쟁하는 상황에서 e심 수요 증가로 로밍 이용객까지 줄어들 수 있다는 분석입니다. <span class='ref'>[참고] 여행 e심 수요 확대는 알뜰폰의 로밍 대체 상품 기획에 참고할 만한 흐름입니다.</span></p>
+        <a class="more" href="https://n.news.naver.com/mnews/article/023/0003994321?sid=105" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+  </div>
+
+  <div class="sec-title" id="sec4"><span class="dot" style="background:var(--s4)"></span>타사 소식 <span class="cnt">0건 · 모니터링 31개 브랜드</span></div>
+  <div class="block empty">오늘은 주요 소식이 없습니다.</div>
+
+  <footer>
+    본 뉴스레터는 기사 제목·출처·원문 링크와 자체 요약만 포함하며, 기사 본문을 전재하지 않습니다.<br>
+    큰사람커넥트 마케팅팀 제작 · 이야기 데일리 · 평일 오전 9시 발행
+  </footer>
+</div>
+<script>
+/* 발행일 선택 — 최근 30일 평일 목록. 발행분이 있는 날짜만 열람 가능.
+   (메일 클라이언트가 스크립트를 막으면 <noscript> 링크로 대체됩니다) */
+(function(){
+  var ARCHIVE = 'https://zmstkfkam6-creator.github.io/eyagi-daily/';
+  var PUBLISHED = ['2026-08-24','2026-08-21'];   /* 발행분이 있는 날짜 — 발송할 때마다 추가 */
+  var WD = ['일','월','화','수','목','금','토'];
+  var sel = document.getElementById('archsel');
+  if(!sel) return;
+  function pad(n){ return String(n).padStart(2,'0'); }
+  var today = new Date(), added = 0;
+  for(var i=0; i<40 && added<30; i++){
+    var d = new Date(today.getFullYear(), today.getMonth(), today.getDate()-i);
+    var w = d.getDay();
+    if(w===0 || w===6) continue;                 /* 주말 미발행 */
+    var k = d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+    var has = PUBLISHED.indexOf(k) !== -1;
+    var o = document.createElement('option');
+    o.value = has ? k : '';
+    o.textContent = (d.getMonth()+1)+'월 '+d.getDate()+'일 ('+WD[w]+')' + (has ? '' : ' · 발행 없음');
+    o.disabled = !has;
+    sel.appendChild(o);
+    added++;
+  }
+  sel.selectedIndex = 0;                          /* 오늘(최신) 표시 */
+  sel.addEventListener('change', function(){
+    if(!sel.value) return;
+    window.open(ARCHIVE + sel.value + '.html', '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
