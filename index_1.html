@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="robots" content="noindex, nofollow">
+<title>이야기 데일리 아카이브</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+  :root{
+    --bg1:#081633; --bg2:#0F2A5C; --bg3:#071228;
+    --on-bg:#EAF1FC; --on-bg-sub:#9DB0CE; --on-bg-accent:#7FB8FF;
+    --card:#FFFFFF; --ink:#191F28; --body:#4E5968;
+    --muted:#8B95A1; --line:#E5E8EB; --action:#3182F6;
+  }
+  *{box-sizing:border-box}
+  html{background:#081633;color-scheme:light only;min-height:100%}
+  html,body{margin:0}
+  body{
+    min-height:100vh;
+    background-color:#081633;
+    background-image:
+      radial-gradient(1100px 620px at 12% -8%, rgba(77,163,255,.20), transparent 62%),
+      radial-gradient(900px 520px at 92% 4%, rgba(167,139,250,.13), transparent 58%),
+      linear-gradient(168deg,var(--bg1) 0%,var(--bg2) 46%,var(--bg3) 100%);
+    background-attachment:fixed;background-repeat:no-repeat;
+    color:var(--on-bg);
+    font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+    font-size:13px;line-height:1.55;-webkit-text-size-adjust:100%;
+    padding:36px 16px 48px;
+  }
+  .wrap{max-width:680px;margin:0 auto}
+  .kicker{font-size:11px;color:var(--on-bg-accent);letter-spacing:.06em;font-weight:700;margin:0 0 7px}
+  h1{color:var(--on-bg);margin:0 0 5px;font-size:26px;font-weight:700;letter-spacing:-.035em;line-height:1.2}
+  .sub{font-size:11px;color:var(--on-bg-sub);margin:0 0 26px}
+  .list{background:var(--card);border-radius:16px;padding:0 16px;overflow:hidden;box-shadow:0 8px 24px rgba(3,10,26,.28)}
+  a.issue{
+    display:block;text-decoration:none;color:var(--ink);
+    padding:15px 0;border-bottom:1px solid var(--line);
+  }
+  a.issue:last-child{border-bottom:0}
+  a.issue:hover .t{color:var(--action)}
+  .issue .d{display:block;font-size:11px;font-weight:700;color:var(--action);letter-spacing:-.01em;margin-bottom:4px}
+  .issue .t{display:block;font-size:14px;font-weight:600;line-height:1.5;letter-spacing:-.025em;color:var(--ink)}
+  .issue .m{display:block;font-size:11px;color:var(--muted);margin-top:5px}
+  footer{margin-top:28px;color:var(--on-bg-sub);font-size:10px;text-align:center;line-height:1.65}
+  @media (max-width:420px){ body{padding:24px 14px 38px} h1{font-size:25px} .list{padding:0 15px} }
+  @media (prefers-color-scheme: dark){
+    html{background:#081633}
+    body{color:var(--on-bg)}
+    .list{background:#FFFFFF}
+    .issue .t{color:#191F28}
+    .issue .m{color:#8B95A1}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">EYAGI DAILY · 큰사람커넥트 사내 뉴스레터</p>
+  <h1>이야기 데일리 아카이브</h1>
+  <p class="sub">평일 오전 9시 발행 · 지난 발행분을 날짜별로 볼 수 있습니다</p>
+
+  <div class="list">
+    <a class="issue" href="./2026-08-25.html">
+      <span class="d">제3호 · 2026년 8월 25일 (화)</span>
+      <span class="t">U+유모바일 '유픽' 출시, 알뜰폰 뺀 최적요금제 실효성 논란</span>
+      <span class="m">기사 4건 · 자사 0 · 이통3사 자회사 1 · 업계·정책 3 · 타사 0</span>
+    </a>
+
+    <a class="issue" href="./2026-08-24.html">
+      <span class="d">제2호 · 2026년 8월 24일 (월)</span>
+      <span class="t">미디어로그 알뜰폰 개인정보 위법 수집 제재 위기, '최적 요금제 안내'에서 알뜰폰 제외</span>
+      <span class="m">기사 7건 · 자사 0 · 이통3사 자회사 2 · 업계·정책 5 · 타사 0</span>
+    </a>
+  </div>
+
+  <footer>
+    본 뉴스레터는 기사 제목·출처·원문 링크와 자체 요약만 포함하며, 기사 본문을 전재하지 않습니다.<br>
+    큰사람커넥트 마케팅팀 제작 · 이야기 데일리
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>[이야기 데일리] 2026년 8월 25일 (화)</title>
+<!--
+  이야기 데일리 · 2026-08-21(금) 제1호(시범판) · 템플릿 v3.1 (애플 레퍼런스 스타일 + 컬러 포인트)
+  · 디자인 규칙: 캔버스 #f5f5f7(상단에 옅은 블루 워시) / 카드 #ffffff (radius 18px, 그림자 없음)
+    본문 #1d1d1f · 보조 #6e6e73·#515154 / 액션(필 버튼) #0071e3
+    섹션 컬러 포인트: 자사 #0071e3 · 3사 자회사 #7a4fd3 · 업계·정책 #0f9d77 · 타사 #e07f1d
+    (섹션 제목 앞 컬러 도트 + 주요 뉴스 카드의 틴트 태그에만 사용 — 본문은 무채색 유지)
+  · 타이포: 시스템 서체(SF Pro 계열) 스택. 제목 600 / 본문 400. v3 대비 전 역할 한 단계 축소.
+  · 상호작용(지침 2.2): 모든 기사는 접힌 상태로 시작(open 속성 금지). 헤드라인 클릭 → 요약 펼침
+    → '기사 원문 보기' 필 버튼으로 원문 이동.
+  · 빈 섹션은 "오늘은 주요 소식이 없습니다."만 표기.
+  · 실제 발송물: 이 구조 그대로, 기사 항목만 당일 기사로 교체. 파일명 이야기데일리_YYYY-MM-DD.html
+  · 수집 기간: 2026-08-24(월) 08:59 ~ 2026-08-25(화) 08:59 KST · 지침 v2.2 기준
+-->
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+  :root{
+    /* 배경만 법인 홈페이지형 딥네이비 그라데이션 — 카드 안쪽은 기존 라이트 유지 */
+    --bg1:#081633; --bg2:#0F2A5C; --bg3:#071228;
+    --on-bg:#EAF1FC; --on-bg-sub:#9DB0CE; --on-bg-accent:#7FB8FF;
+    --canvas:#F2F4F6; --card:#FFFFFF; --ink:#191F28; --body:#4E5968;
+    --muted:#8B95A1; --weak:#B0B8C1; --line:#E5E8EB;
+    --action:#3182F6; --action-soft:#E8F3FF;
+    --s1:#3182F6; --s1t:#E8F3FF;
+    --s2:#8B5CF6; --s2t:#F3EEFF;
+    --s3:#00A881; --s3t:#E8F8F4;
+    --s4:#F59E0B; --s4t:#FFF5DD;
+  }
+  *{box-sizing:border-box}
+  html{background:#081633;color-scheme:light only;min-height:100%}
+  html,body{margin:0}
+  body{
+    min-height:100vh;
+    background-color:#081633;
+    background-image:
+      radial-gradient(1100px 620px at 12% -8%, rgba(77,163,255,.20), transparent 62%),
+      radial-gradient(900px 520px at 92% 4%, rgba(167,139,250,.13), transparent 58%),
+      linear-gradient(168deg,var(--bg1) 0%,var(--bg2) 46%,var(--bg3) 100%);
+    background-attachment:fixed;background-repeat:no-repeat;
+    color:var(--on-bg);
+    font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+    font-size:13px;line-height:1.55;-webkit-text-size-adjust:100%;
+    padding:36px 16px 48px;
+  }
+  .wrap{max-width:680px;margin:0 auto}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 7px}
+  .hright{display:flex;flex-direction:column;align-items:flex-end;gap:7px;flex:0 0 auto}
+  .picker{display:flex;align-items:center;gap:7px}
+  .picker label{font-size:10px;font-weight:700;color:var(--on-bg-sub);letter-spacing:-.01em;white-space:nowrap}
+  #archsel{
+    font-family:inherit;font-size:12px;font-weight:700;color:var(--on-bg);letter-spacing:-.02em;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+    border-radius:10px;padding:7px 11px;cursor:pointer;max-width:200px;
+  }
+  #archsel:hover{background:rgba(255,255,255,.16)}
+  #archsel option{color:#191F28;background:#fff;font-weight:500}
+  .archlink{
+    font-size:10px;font-weight:700;color:var(--on-bg-sub);text-decoration:none;
+    border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;
+  }
+  .made{
+    flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:-.01em;color:var(--on-bg-sub);
+    border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;white-space:nowrap;
+  }
+  .kicker{font-size:11px;color:var(--on-bg-accent);letter-spacing:.06em;font-weight:700;margin:0}
+  h1{color:var(--on-bg);margin:0 0 5px;font-size:26px;font-weight:700;letter-spacing:-.035em;line-height:1.2}
+  h1 .pilot{font-size:11px;font-weight:500;color:var(--on-bg-sub);letter-spacing:-.01em;vertical-align:2px;margin-left:7px}
+  .dateline{font-size:11px;color:var(--on-bg-sub);margin:0 0 22px}
+  .oneline{
+    background:var(--card);border-radius:16px;padding:14px 16px;margin:0 0 28px;
+    box-shadow:0 8px 24px rgba(3,10,26,.28);
+    font-size:13px;line-height:1.65;letter-spacing:-.015em;color:var(--body);
+  }
+  .oneline b{font-weight:700;color:var(--action)}
+  .sec-title{
+    color:var(--on-bg);
+    display:flex;align-items:center;gap:7px;margin:28px 2px 9px;
+    font-size:18px;font-weight:700;letter-spacing:-.025em;
+  }
+  .sec-title:first-of-type{margin-top:0}
+  .sec-title .dot{width:4px;height:14px;border-radius:999px;flex:0 0 auto}
+  .sec-title .cnt{font-size:11px;font-weight:500;color:var(--on-bg-sub);letter-spacing:-.01em}
+  .block{color:var(--ink);background:var(--card);border-radius:16px;padding:0 16px;overflow:hidden;box-shadow:0 8px 24px rgba(3,10,26,.28)}
+  .block.empty{padding:14px 16px;color:var(--muted);font-size:12px}
+  .picks{display:grid;grid-template-columns:1fr;gap:8px}
+  @media (min-width:640px){.picks{grid-template-columns:repeat(3,1fr)}}
+  a.pick{
+    display:block;background:var(--card);border-radius:16px;padding:13px 14px;
+    box-shadow:0 8px 24px rgba(3,10,26,.28);
+    text-decoration:none;color:var(--ink);transition:background-color .15s ease;
+  }
+  a.pick:hover{background:#F9FAFB}
+  .pick .cat{
+    display:inline-block;font-size:10px;font-weight:700;letter-spacing:-.01em;
+    padding:3px 8px;border-radius:999px;margin-bottom:7px;
+  }
+  .pick p{margin:0;font-size:14px;font-weight:600;line-height:1.42;letter-spacing:-.025em}
+  .pick small{display:block;margin-top:6px;font-size:11px;font-weight:400;color:var(--muted)}
+  details.item{border-bottom:1px solid var(--line)}
+  details.item:last-child{border-bottom:0}
+  details.item summary{
+    list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:10px;
+    padding:13px 0;
+  }
+  details.item summary::-webkit-details-marker{display:none}
+  .hl{min-width:0;flex:1}
+  .hl .t{color:var(--ink);display:block;font-size:14px;font-weight:600;line-height:1.43;letter-spacing:-.025em}
+  .hl .m{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+  .chev{flex:0 0 auto;color:var(--weak);font-size:11px;margin-top:3px;transition:transform .18s ease}
+  details.item[open] .chev{transform:rotate(180deg);color:var(--action)}
+  .body{padding:0 0 15px;font-size:13px;line-height:1.7;color:var(--body)}
+  .body p{margin:0 0 11px}
+  .body .ref{color:var(--muted);font-size:12px}
+  a.more{
+    display:inline-block;background:var(--action);color:#fff;text-decoration:none;
+    font-size:12px;font-weight:600;border-radius:999px;padding:7px 13px;
+  }
+  footer{margin-top:32px;color:var(--on-bg-sub);font-size:10px;text-align:center;line-height:1.65}
+  @media (max-width:420px){
+    body{padding:24px 14px 38px}
+    h1{font-size:25px}
+    .sec-title{margin-top:25px}
+    .block{padding:0 15px}
+    .oneline{padding:13px 15px}
+  }
+
+  /* 뷰어 테마와 무관하게 동일 렌더링 고정 */
+  @media (prefers-color-scheme: dark){
+    html{background:#081633}
+    body{color:var(--on-bg)}
+    .oneline,.block,a.pick{background:#FFFFFF}
+    .oneline{color:#4E5968}
+    .hl .t,.pick p{color:#191F28}
+    .body{color:#4E5968}
+    .hl .m,.pick small,.block.empty,.body .ref{color:#8B95A1}
+    a.more{background:#3182F6;color:#fff}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="kicker">EYAGI DAILY · 큰사람커넥트 사내 뉴스레터</span>
+    <div class="hright">
+      <span class="made">마케팅팀 제작</span>
+      <div class="picker">
+        <label for="archsel">발행일 선택</label>
+        <select id="archsel" aria-label="발행일 선택"></select>
+      </div>
+      <noscript><a class="archlink" href="https://eyagimobile2-hash.github.io/eyagi-daily/" target="_blank" rel="noopener">지난 발행분 보기</a></noscript>
+    </div>
+  </div>
+  <h1>이야기 데일리<span class="pilot">제3호</span></h1>
+  <p class="dateline">2026년 8월 25일 화요일 · 수집 8/24(월) 08:59 ~ 8/25(화) 08:59 · 기사 4건</p>
+  <div class="oneline"><b>오늘의 한 줄.</b> U+유모바일이 중고폰과 알뜰폰 요금제를 묶은 '유픽'을 출시했고, 알뜰폰이 빠진 '최적요금제 안내'의 실효성 논란과 알뜰폰 번호이동 4개월 연속 순유출 통계가 함께 보도됐습니다.</div>
+  <div class="sec-title">오늘의 주요 뉴스</div>
+  <div class="picks">
+    <a class="pick" href="https://www.epnc.co.kr/news/articleView.html?idxno=405933" target="_blank" rel="noopener">
+      <span class="cat" style="background:var(--s2t);color:var(--s2)">3사 자회사</span>
+      <p>U+유모바일, 중고폰+알뜰 요금제 '유픽' 출시</p>
+      <small>테크월드 · 8/24 10:52</small>
+    </a>
+    <a class="pick" href="https://www.ebn.co.kr/news/articleView.html?idxno=1721414" target="_blank" rel="noopener">
+      <span class="cat" style="background:var(--s3t);color:var(--s3)">업계·정책</span>
+      <p>최적요금제 실효성 논란…알뜰폰은 제외 전망</p>
+      <small>EBN · 8/24 15:12</small>
+    </a>
+    <a class="pick" href="https://n.news.naver.com/mnews/article/243/0000102082?sid=101" target="_blank" rel="noopener">
+      <span class="cat" style="background:var(--s3t);color:var(--s3)">업계·정책</span>
+      <p>"자급제+알뜰폰 조합, 항상 최저가는 아니다"</p>
+      <small>이코노미스트 · 8/24 16:38</small>
+    </a>
+  </div>
+
+  <div class="sec-title" id="sec1"><span class="dot" style="background:var(--s1)"></span>자사 소식 <span class="cnt">0건</span></div>
+  <div class="block empty">오늘은 주요 소식이 없습니다.</div>
+
+  <div class="sec-title" id="sec2"><span class="dot" style="background:var(--s2)"></span>이통3사 자회사 알뜰폰 <span class="cnt">1건</span></div>
+  <div class="block">
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">U+유모바일, 약정 없이 중고폰·알뜰 유심 요금제 가입 한 번에!</span>
+          <span class="m">테크월드 · 8/24 10:52 · 외 매체 보도</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>LG유플러스 자회사 미디어로그의 U+유모바일이 중고폰과 알뜰폰 요금제를 함께 선택할 수 있는 '유픽 폰&amp;유심'을 24일 출시했습니다. 전문 검수를 거친 S급 중고폰 판매와 조건·약정 없는 요금제 가입을 결합해, 중고폰 거래 시 가격 흥정이나 요금제 유지 조건 같은 번거로움을 줄였다는 설명입니다. 회사는 이를 고객 관점에서 알뜰폰 이용 경험을 바꾸는 '브랜드뉴 프로젝트'의 첫 프로그램으로 소개했습니다. <span class='ref'>[참고] 중고폰·자급제 수요와 알뜰폰 요금제를 묶는 결합 기획의 사례로 살펴볼 만합니다.</span></p>
+        <a class="more" href="https://www.epnc.co.kr/news/articleView.html?idxno=405933" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+  </div>
+
+  <div class="sec-title" id="sec3"><span class="dot" style="background:var(--s3)"></span>알뜰폰 업계·정책 <span class="cnt">3건</span></div>
+  <div class="block">
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">"싸고 좋은 요금제 알려주는 거 맞아?"…최적요금제 앞두고 실효성 논란</span>
+          <span class="m">EBN · 8/24 15:12</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>10월 시행을 앞둔 '최적요금제 안내' 제도에서 고지 의무 사업자에 알뜰폰 업체가 포함되지 않을 것으로 전망되면서, 정작 요금에 민감한 계층이 제도 수혜를 입기 어렵다는 지적이 나왔습니다. 이 경우 SK텔레콤·KT·LG유플러스 등 이동통신 3사만 고지 의무를 지게 되며, '통신 마이데이터' 등 유사 서비스가 이미 제공되고 있어 중복 우려도 제기된다고 보도했습니다. <span class='ref'>[참고] 알뜰폰 제외를 지적한 전일 보도(제2호 게재)에 이어 논란이 이어지는 흐름입니다.</span></p>
+        <a class="more" href="https://www.ebn.co.kr/news/articleView.html?idxno=1721414" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">피클플러스, 자급제·알뜰폰 총비용 비교 제시…휴대폰 공동구매 서비스</span>
+          <span class="m">이코노미스트 · 8/24 16:38</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>자급제 단말과 알뜰폰 요금제 조합이 항상 가장 저렴한 것은 아니라는 분석과 함께, 통신사 지원금·단말 할인을 반영한 24개월 총비용 비교를 제공하는 휴대폰 공동구매 서비스가 소개됐습니다. 기사는 한국통신사업자연합회(KTOA) 번호이동 통계를 인용해 알뜰폰이 올해 1분기부터 순유입 규모가 줄었고 4월부터 7월까지 4개월 연속 순유출을 기록했다고 전했으며, "1만원대 저가 요금제가 아니면 통신 3사가 유리할 수도 있다"는 언급도 실었습니다. <span class='ref'>[참고] 단말 지원금까지 포함한 총비용 비교가 확산되면 알뜰폰의 요금 소구 방식에도 영향을 줄 수 있는 사안입니다.</span></p>
+        <a class="more" href="https://n.news.naver.com/mnews/article/243/0000102082?sid=101" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+    <details class="item">
+      <summary>
+        <span class="hl"><span class="t">eSIM 시장 커지자 로밍 사업 '긴장'…통신사 수익원 위협</span>
+          <span class="m">더퍼블릭 · 8/24 13:48</span></span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="body">
+        <p>여행용 eSIM이 확산하면 이동통신사의 로밍 서비스 이용객이 감소할 가능성이 있다는 보도입니다. FDM CCS 인사이트에 따르면 기존 이동통신사들은 전체 매출의 3~5%를 로밍 서비스에서 얻고 있으며, 알뜰폰 사업자와 경쟁하는 상황에서 여행용 eSIM 수요 증가로 로밍 수익까지 줄어들 수 있다고 전했습니다.</p>
+        <a class="more" href="https://www.thepublic.kr/news/articleView.html?idxno=315932" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+    </details>
+  </div>
+
+  <div class="sec-title" id="sec4"><span class="dot" style="background:var(--s4)"></span>타사 소식 <span class="cnt">0건 · 모니터링 31개 브랜드</span></div>
+  <div class="block empty">오늘은 주요 소식이 없습니다.</div>
+
+  <footer>
+    본 뉴스레터는 기사 제목·출처·원문 링크와 자체 요약만 포함하며, 기사 본문을 전재하지 않습니다.<br>
+    큰사람커넥트 마케팅팀 제작 · 이야기 데일리 · 평일 오전 9시 발행
+  </footer>
+</div>
+<script>
+/* 발행일 선택 — 최근 30일 평일 목록. 발행분이 있는 날짜만 열람 가능.
+   (메일 클라이언트가 스크립트를 막으면 <noscript> 링크로 대체됩니다) */
+(function(){
+  var ARCHIVE = 'https://eyagimobile2-hash.github.io/eyagi-daily/';
+  var PUBLISHED = ['2026-08-25','2026-08-24','2026-08-21'];   /* 발행분이 있는 날짜 — 발송할 때마다 추가 */
+  var WD = ['일','월','화','수','목','금','토'];
+  var sel = document.getElementById('archsel');
+  if(!sel) return;
+  function pad(n){ return String(n).padStart(2,'0'); }
+  var today = new Date(), added = 0;
+  for(var i=0; i<40 && added<30; i++){
+    var d = new Date(today.getFullYear(), today.getMonth(), today.getDate()-i);
+    var w = d.getDay();
+    if(w===0 || w===6) continue;                 /* 주말 미발행 */
+    var k = d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+    var has = PUBLISHED.indexOf(k) !== -1;
+    var o = document.createElement('option');
+    o.value = has ? k : '';
+    o.textContent = (d.getMonth()+1)+'월 '+d.getDate()+'일 ('+WD[w]+')' + (has ? '' : ' · 발행 없음');
+    o.disabled = !has;
+    sel.appendChild(o);
+    added++;
+  }
+  sel.selectedIndex = 0;                          /* 오늘(최신) 표시 */
+  sel.addEventListener('change', function(){
+    if(!sel.value) return;
+    window.open(ARCHIVE + sel.value + '.html', '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
